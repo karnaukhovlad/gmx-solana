@@ -53,6 +53,8 @@ bind_address = "127.0.0.1"
 url = "https://api.devnet.solana.com"
 ledger = ".anchor/test-ledger"
 rpc_port = 8899
+# Keep local execution aligned with the production 64-account-lock boundary.
+deactivate_feature = ["9LZdXeKGeBV6hRLdxS1rHbHoEUsKqesCC2ZAPTPKJAbK"]
 
 # Chainlink Verifier Program
 [[test.validator.clone]]
