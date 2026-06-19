@@ -1,0 +1,19 @@
+case_limit=128
+feature_id=9LZdXeKGeBV6hRLdxS1rHbHoEUsKqesCC2ZAPTPKJAbK
+feature_expected_active=true
+exit_status=0
+GLV_SCENARIO case="baseline deposit + close" configured_markets=12 active_markets=1 inactive_markets=11 swap_path_markets=0 close_merged=true account_shape="Only the active GLV market is priced; there is no swap path or route inventory."
+GLV_ACCOUNT_REPORT case="baseline deposit + close" configured_markets=12 active_markets=1 swap_path_markets=0 total_account_references=92 unique_accounts=49 unique_oracle_feeds=2 serialized_size=744 packet_limit=1232 close_merged=true
+GLV_SCENARIO case="baseline deposit + close" configured_markets=12 active_markets=1 inactive_markets=11 swap_path_markets=0 close_merged=true account_shape="Only the active GLV market is priced; there is no swap path or route inventory."
+GLV_ACCOUNT_REPORT case="baseline deposit + close" configured_markets=12 active_markets=1 swap_path_markets=0 total_account_references=92 unique_accounts=49 unique_oracle_feeds=2 serialized_size=744 packet_limit=1232 close_merged=true
+GLV_RESULT case="baseline deposit + close" actual=EXECUTED unique_accounts=49
+GLV_SCENARIO case="baseline withdrawal + close" configured_markets=12 active_markets=1 inactive_markets=11 swap_path_markets=0 close_merged=true account_shape="Only the active GLV market is priced; there is no output swap path or route inventory."
+GLV_ACCOUNT_REPORT case="baseline withdrawal + close" configured_markets=12 active_markets=1 swap_path_markets=0 total_account_references=93 unique_accounts=58 unique_oracle_feeds=2 serialized_size=878 packet_limit=1232 close_merged=true
+GLV_RESULT case="baseline withdrawal + close" actual=EXECUTED unique_accounts=58
+GLV_SCENARIO case="route-heavy deposit + close" configured_markets=12 active_markets=1 inactive_markets=11 swap_path_markets=8 close_merged=true account_shape="Eight swap-path market references, distinct swap/position virtual inventories, and merged close accounts produce a 65-account transaction."
+GLV_ACCOUNT_REPORT case="route-heavy deposit + close" configured_markets=12 active_markets=1 swap_path_markets=8 total_account_references=116 unique_accounts=65 unique_oracle_feeds=2 serialized_size=784 packet_limit=1232 close_merged=true
+GLV_RESULT case="route-heavy deposit + close" actual=EXECUTED unique_accounts=65
+GLV_SCENARIO case="route-heavy withdrawal + close" configured_markets=12 active_markets=1 inactive_markets=11 swap_path_markets=4 close_merged=true account_shape="Four output-route markets, virtual inventories, the external route market, receiver/output accounts, and merged close accounts produce a 68-account transaction."
+GLV_ACCOUNT_REPORT case="route-heavy withdrawal + close" configured_markets=12 active_markets=1 swap_path_markets=4 total_account_references=107 unique_accounts=68 unique_oracle_feeds=3 serialized_size=1029 packet_limit=1232 close_merged=true
+GLV_RESULT case="route-heavy withdrawal + close" actual=EXECUTED unique_accounts=68
+

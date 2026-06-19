@@ -1,0 +1,320 @@
+=== limit=64 attempt=1/3 ===
+[2026-06-19T19:46:00.754087000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.cache/solana/v1.43/platform-tools/rust/bin/rustc" --version
+[2026-06-19T19:46:01.566650000Z INFO  cargo_build_sbf] Solana SDK: /Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf
+[2026-06-19T19:46:01.566658000Z INFO  cargo_build_sbf] Features: mock devnet,test-only,migration
+[2026-06-19T19:46:01.567377000Z INFO  cargo_build_sbf] spawn: "rustup" toolchain list -v
+[2026-06-19T19:46:01.593446000Z INFO  cargo_build_sbf] spawn: "cargo" +solana build --release --target sbf-solana-solana --features mock --features devnet,test-only,migration
+   Compiling gmsol-mock-chainlink-verifier v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/mock-chainlink-verifier)
+    Finished `release` profile [optimized] target(s) in 1.59s
+[2026-06-19T19:46:03.247256000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/scripts/strip.sh" /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/sbf-solana-solana/release/gmsol_mock_chainlink_verifier.so /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_mock_chainlink_verifier.so
+[2026-06-19T19:46:03.311014000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/dependencies/platform-tools/llvm/bin/llvm-readelf" --dyn-symbols /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_mock_chainlink_verifier.so
+[2026-06-19T19:46:03.341902000Z WARN  cargo_build_sbf] The following functions are undefined and not known syscalls ["abort", "sol_log_", "sol_memcpy_", "sol_get_rent_sysvar", "sol_invoke_signed_rust", "sol_set_return_data", "sol_memset_", "sol_try_find_program_address", "sol_log_pubkey", "sol_sha256"].
+[2026-06-19T19:46:03.341909000Z WARN  cargo_build_sbf]          Calling them will trigger a run-time error.
+[2026-06-19T19:46:03.341914000Z INFO  cargo_build_sbf] To deploy this program:
+[2026-06-19T19:46:03.341915000Z INFO  cargo_build_sbf]   $ solana program deploy /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_mock_chainlink_verifier.so
+[2026-06-19T19:46:03.341916000Z INFO  cargo_build_sbf] The program address will default to this keypair (override with --program-id):
+[2026-06-19T19:46:03.341916000Z INFO  cargo_build_sbf]   /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_mock_chainlink_verifier-keypair.json
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.33s
+     Running unittests src/lib.rs (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/debug/deps/gmsol_mock_chainlink_verifier-1d84ca6f1de17dc9)
+[2026-06-19T19:46:03.791535000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.cache/solana/v1.43/platform-tools/rust/bin/rustc" --version
+[2026-06-19T19:46:04.080073000Z INFO  cargo_build_sbf] Solana SDK: /Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf
+[2026-06-19T19:46:04.080079000Z INFO  cargo_build_sbf] Features: mock devnet,test-only,migration
+[2026-06-19T19:46:04.080165000Z INFO  cargo_build_sbf] spawn: "rustup" toolchain list -v
+[2026-06-19T19:46:04.103769000Z INFO  cargo_build_sbf] spawn: "cargo" +solana build --release --target sbf-solana-solana --features mock --features devnet,test-only,migration
+   Compiling gmsol-mock-chainlink-verifier v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/mock-chainlink-verifier)
+   Compiling gmsol-chainlink-datastreams v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/crates/chainlink-datastreams)
+   Compiling gmsol-store v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/store)
+   Compiling gmsol-timelock v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/timelock)
+    Finished `release` profile [optimized] target(s) in 25.02s
+[2026-06-19T19:46:29.169280000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/scripts/strip.sh" /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/sbf-solana-solana/release/gmsol_timelock.so /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_timelock.so
+[2026-06-19T19:46:29.210163000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/dependencies/platform-tools/llvm/bin/llvm-readelf" --dyn-symbols /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_timelock.so
+[2026-06-19T19:46:29.220619000Z WARN  cargo_build_sbf] The following functions are undefined and not known syscalls ["abort", "sol_log_", "sol_memcmp_", "sol_memcpy_", "sol_get_clock_sysvar", "sol_get_last_restart_slot", "sol_get_rent_sysvar", "sol_invoke_signed_rust", "sol_get_return_data", "sol_memset_", "sol_try_find_program_address", "sol_create_program_address", "sol_log_pubkey", "sol_sha256"].
+[2026-06-19T19:46:29.220626000Z WARN  cargo_build_sbf]          Calling them will trigger a run-time error.
+[2026-06-19T19:46:29.220632000Z INFO  cargo_build_sbf] To deploy this program:
+[2026-06-19T19:46:29.220632000Z INFO  cargo_build_sbf]   $ solana program deploy /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_timelock.so
+[2026-06-19T19:46:29.220637000Z INFO  cargo_build_sbf] The program address will default to this keypair (override with --program-id):
+[2026-06-19T19:46:29.220637000Z INFO  cargo_build_sbf]   /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_timelock-keypair.json
+   Compiling gmsol-callback v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/callback)
+   Compiling gmsol-mock-chainlink-verifier v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/mock-chainlink-verifier)
+   Compiling gmsol-chainlink-datastreams v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/crates/chainlink-datastreams)
+   Compiling gmsol-store v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/store)
+   Compiling gmsol-timelock v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/timelock)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 45s
+     Running unittests src/lib.rs (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/debug/deps/gmsol_timelock-124988bca82773e4)
+[2026-06-19T19:48:14.679807000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.cache/solana/v1.43/platform-tools/rust/bin/rustc" --version
+[2026-06-19T19:48:15.476842000Z INFO  cargo_build_sbf] Solana SDK: /Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf
+[2026-06-19T19:48:15.476851000Z INFO  cargo_build_sbf] Features: mock devnet,test-only,migration
+[2026-06-19T19:48:15.477180000Z INFO  cargo_build_sbf] spawn: "rustup" toolchain list -v
+[2026-06-19T19:48:15.502346000Z INFO  cargo_build_sbf] spawn: "cargo" +solana build --release --target sbf-solana-solana --features mock --features devnet,test-only,migration
+Error: Function _ZN110_$LT$gmsol_programs..gmsol_store..utils..Account$u20$as$u20$core..convert..TryFrom$LT$$RF$$u5b$u8$u5d$$GT$$GT$8try_from17h3713d870ffecae2cE Stack offset of 22912 exceeded max offset of 4096 by 18816 bytes, please minimize large stack variables. Estimated function frame size: 22928 bytes. Exceeding the maximum stack offset may cause undefined behavior during execution.
+
+    Finished `release` profile [optimized] target(s) in 0.42s
+[2026-06-19T19:48:15.960331000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/dependencies/platform-tools/llvm/bin/llvm-readelf" --dyn-symbols /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_gt_incentive.so
+[2026-06-19T19:48:15.971516000Z WARN  cargo_build_sbf] The following functions are undefined and not known syscalls ["abort", "sol_log_", "sol_memcpy_", "sol_get_rent_sysvar", "sol_invoke_signed_rust", "sol_memset_", "sol_try_find_program_address", "sol_log_pubkey", "sol_sha256"].
+[2026-06-19T19:48:15.971523000Z WARN  cargo_build_sbf]          Calling them will trigger a run-time error.
+[2026-06-19T19:48:15.971529000Z INFO  cargo_build_sbf] To deploy this program:
+[2026-06-19T19:48:15.971529000Z INFO  cargo_build_sbf]   $ solana program deploy /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_gt_incentive.so
+[2026-06-19T19:48:15.971530000Z INFO  cargo_build_sbf] The program address will default to this keypair (override with --program-id):
+[2026-06-19T19:48:15.971531000Z INFO  cargo_build_sbf]   /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_gt_incentive-keypair.json
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.22s
+     Running unittests src/lib.rs (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/debug/deps/gmsol_gt_incentive-7f8e2c7d6fc39d22)
+[2026-06-19T19:48:16.281214000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.cache/solana/v1.43/platform-tools/rust/bin/rustc" --version
+[2026-06-19T19:48:16.532800000Z INFO  cargo_build_sbf] Solana SDK: /Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf
+[2026-06-19T19:48:16.532808000Z INFO  cargo_build_sbf] Features: mock devnet,test-only,migration
+[2026-06-19T19:48:16.532901000Z INFO  cargo_build_sbf] spawn: "rustup" toolchain list -v
+[2026-06-19T19:48:16.596679000Z INFO  cargo_build_sbf] spawn: "cargo" +solana build --release --target sbf-solana-solana --features mock --features devnet,test-only,migration
+Error: Function _ZN110_$LT$gmsol_programs..gmsol_store..utils..Account$u20$as$u20$core..convert..TryFrom$LT$$RF$$u5b$u8$u5d$$GT$$GT$8try_from17h3713d870ffecae2cE Stack offset of 22912 exceeded max offset of 4096 by 18816 bytes, please minimize large stack variables. Estimated function frame size: 22928 bytes. Exceeding the maximum stack offset may cause undefined behavior during execution.
+
+    Finished `release` profile [optimized] target(s) in 0.39s
+[2026-06-19T19:48:17.168622000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/dependencies/platform-tools/llvm/bin/llvm-readelf" --dyn-symbols /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_liquidity_provider.so
+[2026-06-19T19:48:17.172748000Z WARN  cargo_build_sbf] The following functions are undefined and not known syscalls ["abort", "sol_log_", "sol_memcmp_", "sol_memcpy_", "sol_get_clock_sysvar", "sol_get_rent_sysvar", "sol_invoke_signed_rust", "sol_get_return_data", "sol_memset_", "sol_try_find_program_address", "sol_create_program_address", "sol_log_pubkey", "sol_sha256", "sol_memmove_"].
+[2026-06-19T19:48:17.172754000Z WARN  cargo_build_sbf]          Calling them will trigger a run-time error.
+[2026-06-19T19:48:17.172760000Z INFO  cargo_build_sbf] To deploy this program:
+[2026-06-19T19:48:17.172761000Z INFO  cargo_build_sbf]   $ solana program deploy /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_liquidity_provider.so
+[2026-06-19T19:48:17.172761000Z INFO  cargo_build_sbf] The program address will default to this keypair (override with --program-id):
+[2026-06-19T19:48:17.172762000Z INFO  cargo_build_sbf]   /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_liquidity_provider-keypair.json
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.16s
+     Running unittests src/lib.rs (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/debug/deps/gmsol_liquidity_provider-87055dfbe09ffa69)
+[2026-06-19T19:48:17.476146000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.cache/solana/v1.43/platform-tools/rust/bin/rustc" --version
+[2026-06-19T19:48:17.734619000Z INFO  cargo_build_sbf] Solana SDK: /Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf
+[2026-06-19T19:48:17.734627000Z INFO  cargo_build_sbf] Features: mock devnet,test-only,migration
+[2026-06-19T19:48:17.734714000Z INFO  cargo_build_sbf] spawn: "rustup" toolchain list -v
+[2026-06-19T19:48:17.757848000Z INFO  cargo_build_sbf] spawn: "cargo" +solana build --release --target sbf-solana-solana --features mock --features devnet,test-only,migration
+   Compiling gmsol-callback v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/callback)
+    Finished `release` profile [optimized] target(s) in 1.30s
+[2026-06-19T19:48:19.086314000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/scripts/strip.sh" /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/sbf-solana-solana/release/gmsol_callback.so /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_callback.so
+[2026-06-19T19:48:19.129025000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/dependencies/platform-tools/llvm/bin/llvm-readelf" --dyn-symbols /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_callback.so
+[2026-06-19T19:48:19.132079000Z WARN  cargo_build_sbf] The following functions are undefined and not known syscalls ["abort", "sol_log_", "sol_memcpy_", "sol_get_clock_sysvar", "sol_get_rent_sysvar", "sol_invoke_signed_rust", "sol_memset_", "sol_try_find_program_address", "sol_create_program_address", "sol_log_pubkey", "sol_sha256"].
+[2026-06-19T19:48:19.132085000Z WARN  cargo_build_sbf]          Calling them will trigger a run-time error.
+[2026-06-19T19:48:19.132090000Z INFO  cargo_build_sbf] To deploy this program:
+[2026-06-19T19:48:19.132091000Z INFO  cargo_build_sbf]   $ solana program deploy /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_callback.so
+[2026-06-19T19:48:19.132091000Z INFO  cargo_build_sbf] The program address will default to this keypair (override with --program-id):
+[2026-06-19T19:48:19.132092000Z INFO  cargo_build_sbf]   /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_callback-keypair.json
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.15s
+     Running unittests src/lib.rs (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/debug/deps/gmsol_callback-87dfaacdc28b2f24)
+[2026-06-19T19:48:19.371868000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.cache/solana/v1.43/platform-tools/rust/bin/rustc" --version
+[2026-06-19T19:48:19.624735000Z INFO  cargo_build_sbf] Solana SDK: /Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf
+[2026-06-19T19:48:19.624745000Z INFO  cargo_build_sbf] Features: mock devnet,test-only,migration
+[2026-06-19T19:48:19.624828000Z INFO  cargo_build_sbf] spawn: "rustup" toolchain list -v
+[2026-06-19T19:48:19.647490000Z INFO  cargo_build_sbf] spawn: "cargo" +solana build --release --target sbf-solana-solana --features mock --features devnet,test-only,migration
+Error: Function _ZN110_$LT$gmsol_programs..gmsol_store..utils..Account$u20$as$u20$core..convert..TryFrom$LT$$RF$$u5b$u8$u5d$$GT$$GT$8try_from17h37783cb3220ad0fbE Stack offset of 22912 exceeded max offset of 4096 by 18816 bytes, please minimize large stack variables. Estimated function frame size: 22928 bytes. Exceeding the maximum stack offset may cause undefined behavior during execution.
+
+   Compiling gmsol-callback v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/callback)
+   Compiling gmsol-competition v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/competition)
+    Finished `release` profile [optimized] target(s) in 1.99s
+[2026-06-19T19:48:21.666256000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/scripts/strip.sh" /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/sbf-solana-solana/release/gmsol_competition.so /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_competition.so
+[2026-06-19T19:48:21.699425000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/dependencies/platform-tools/llvm/bin/llvm-readelf" --dyn-symbols /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_competition.so
+[2026-06-19T19:48:21.702872000Z WARN  cargo_build_sbf] The following functions are undefined and not known syscalls ["abort", "sol_log_", "sol_memcpy_", "sol_get_clock_sysvar", "sol_get_rent_sysvar", "sol_invoke_signed_rust", "sol_memset_", "sol_try_find_program_address", "sol_create_program_address", "sol_log_pubkey", "sol_sha256", "sol_memmove_"].
+[2026-06-19T19:48:21.702877000Z WARN  cargo_build_sbf]          Calling them will trigger a run-time error.
+[2026-06-19T19:48:21.702882000Z INFO  cargo_build_sbf] To deploy this program:
+[2026-06-19T19:48:21.702883000Z INFO  cargo_build_sbf]   $ solana program deploy /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_competition.so
+[2026-06-19T19:48:21.702883000Z INFO  cargo_build_sbf] The program address will default to this keypair (override with --program-id):
+[2026-06-19T19:48:21.702884000Z INFO  cargo_build_sbf]   /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_competition-keypair.json
+   Compiling gmsol-callback v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/callback)
+   Compiling gmsol-competition v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/competition)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.46s
+     Running unittests src/lib.rs (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/debug/deps/gmsol_competition-59f33218237caddf)
+[2026-06-19T19:48:23.506611000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.cache/solana/v1.43/platform-tools/rust/bin/rustc" --version
+[2026-06-19T19:48:23.779984000Z INFO  cargo_build_sbf] Solana SDK: /Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf
+[2026-06-19T19:48:23.779991000Z INFO  cargo_build_sbf] Features: mock devnet,test-only,migration
+[2026-06-19T19:48:23.780078000Z INFO  cargo_build_sbf] spawn: "rustup" toolchain list -v
+[2026-06-19T19:48:23.803971000Z INFO  cargo_build_sbf] spawn: "cargo" +solana build --release --target sbf-solana-solana --features mock --features devnet,test-only,migration
+   Compiling gmsol-callback v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/callback)
+   Compiling gmsol-chainlink-datastreams v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/crates/chainlink-datastreams)
+   Compiling gmsol-store v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/store)
+   Compiling gmsol-treasury v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/treasury)
+    Finished `release` profile [optimized] target(s) in 25.42s
+[2026-06-19T19:48:49.266334000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/scripts/strip.sh" /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/sbf-solana-solana/release/gmsol_treasury.so /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_treasury.so
+[2026-06-19T19:48:49.305948000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/dependencies/platform-tools/llvm/bin/llvm-readelf" --dyn-symbols /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_treasury.so
+[2026-06-19T19:48:49.315725000Z WARN  cargo_build_sbf] The following functions are undefined and not known syscalls ["abort", "sol_log_", "sol_memcmp_", "sol_memcpy_", "sol_get_clock_sysvar", "sol_get_last_restart_slot", "sol_get_rent_sysvar", "sol_invoke_signed_rust", "sol_set_return_data", "sol_get_return_data", "sol_memset_", "sol_try_find_program_address", "sol_create_program_address", "sol_log_pubkey", "sol_sha256", "sol_memmove_"].
+[2026-06-19T19:48:49.315731000Z WARN  cargo_build_sbf]          Calling them will trigger a run-time error.
+[2026-06-19T19:48:49.315737000Z INFO  cargo_build_sbf] To deploy this program:
+[2026-06-19T19:48:49.315738000Z INFO  cargo_build_sbf]   $ solana program deploy /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_treasury.so
+[2026-06-19T19:48:49.315739000Z INFO  cargo_build_sbf] The program address will default to this keypair (override with --program-id):
+[2026-06-19T19:48:49.315739000Z INFO  cargo_build_sbf]   /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_treasury-keypair.json
+   Compiling gmsol-callback v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/callback)
+   Compiling gmsol-chainlink-datastreams v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/crates/chainlink-datastreams)
+   Compiling gmsol-store v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/store)
+   Compiling gmsol-treasury v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/treasury)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 43s
+     Running unittests src/lib.rs (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/debug/deps/gmsol_treasury-3ab524e2b9f9fe8d)
+[2026-06-19T19:50:33.119987000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.cache/solana/v1.43/platform-tools/rust/bin/rustc" --version
+[2026-06-19T19:50:34.144463000Z INFO  cargo_build_sbf] Solana SDK: /Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf
+[2026-06-19T19:50:34.144472000Z INFO  cargo_build_sbf] Features: mock devnet,test-only,migration
+[2026-06-19T19:50:34.144800000Z INFO  cargo_build_sbf] spawn: "rustup" toolchain list -v
+[2026-06-19T19:50:34.172322000Z INFO  cargo_build_sbf] spawn: "cargo" +solana build --release --target sbf-solana-solana --features mock --features devnet,test-only,migration
+   Compiling gmsol-chainlink-datastreams v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/crates/chainlink-datastreams)
+   Compiling gmsol-store v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/store)
+    Finished `release` profile [optimized] target(s) in 21.09s
+[2026-06-19T19:50:55.314388000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/scripts/strip.sh" /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/sbf-solana-solana/release/gmsol_store.so /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_store.so
+[2026-06-19T19:50:55.370174000Z INFO  cargo_build_sbf] spawn: "/Users/vladislavkarnauhov/.local/share/solana/install/releases/2.1.21/solana-release/bin/sdk/sbf/dependencies/platform-tools/llvm/bin/llvm-readelf" --dyn-symbols /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_store.so
+[2026-06-19T19:50:55.382731000Z WARN  cargo_build_sbf] The following functions are undefined and not known syscalls ["abort", "sol_log_", "sol_memcmp_", "sol_memcpy_", "sol_log_data", "sol_get_clock_sysvar", "sol_get_last_restart_slot", "sol_get_rent_sysvar", "sol_invoke_signed_rust", "sol_set_return_data", "sol_memset_", "sol_try_find_program_address", "sol_create_program_address", "sol_log_pubkey", "sol_sha256", "sol_memmove_"].
+[2026-06-19T19:50:55.382738000Z WARN  cargo_build_sbf]          Calling them will trigger a run-time error.
+[2026-06-19T19:50:55.382744000Z INFO  cargo_build_sbf] To deploy this program:
+[2026-06-19T19:50:55.382745000Z INFO  cargo_build_sbf]   $ solana program deploy /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_store.so
+[2026-06-19T19:50:55.382746000Z INFO  cargo_build_sbf] The program address will default to this keypair (override with --program-id):
+[2026-06-19T19:50:55.382746000Z INFO  cargo_build_sbf]   /Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/deploy/gmsol_store-keypair.json
+   Compiling gmsol-chainlink-datastreams v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/crates/chainlink-datastreams)
+   Compiling gmsol-store v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/store)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 42s
+     Running unittests src/lib.rs (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/target/debug/deps/gmsol_store-95c01a611381f581)
+
+Found a 'test' script in the Anchor.toml. Running it as a test suite!
+
+Running test suite: "/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/Anchor.toml"
+
+   Compiling gmsol-mock-chainlink-verifier v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/mock-chainlink-verifier)
+   Compiling gmsol-callback v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/callback)
+   Compiling gmsol-chainlink-datastreams v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/crates/chainlink-datastreams)
+   Compiling gmsol-competition v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/competition)
+   Compiling gmsol-sdk v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/crates/sdk)
+   Compiling gmsol-store v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/programs/store)
+   Compiling gmsol-tests v0.11.0 (/Users/vladislavkarnauhov/RustroverProjects/gmx-solana/tests)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 10.33s
+     Running anchor.rs (target/debug/deps/anchor-520da8829add0ee1)
+
+running 1 test
+[2m2026-06-19T19:52:58.721911Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m created an ALT for common addresses [3mcommon_alt[0m[2m=[0mHNXukvabvgYTw2pLunuAqxAs8k5RQd33ymDurbr8cUPG [3msignature[0m[2m=[0m4omPp4aayGnpNJ24HvFgR5xbPeVDP6m13ThRXGE7yYKXBnYm7DACUARayvD87eKzX1JE8omwoHMshusi5Wmr4CF4
+[2m2026-06-19T19:52:59.227401Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m created an ALT for market addresses [3mmarket_alt[0m[2m=[0mBjYsRK1JmhzsRjXFQaob6BDzKZ6aLJcrnXtYHXRLt2i8 [3msignature[0m[2m=[0m2kfNrTUJR2QNveS8s3mUqSdzub3S23C2YufN5SgopRxeQQtkUJSQK3tdLMx8w1K3VaZiPu3tDe1GZLCK4yYjggcC
+[2m2026-06-19T19:52:59.229499Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m [Setting up everything...]
+[2m2026-06-19T19:52:59.737383Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m initialized chainlink mock [3msignature[0m[2m=[0m5sr1yvdwzzbnRm7K7V6cDvMCc9HHZn42wmkDcPkeNk2Z2ckz7Kqdg2sxpPTT1zA4gTzEg4huhdmbfBekUFruRpHk
+[2m2026-06-19T19:52:59.737646Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m added a new user [3mname[0m[2m=[0muser_0 [3mpubkey[0m[2m=[0mPFNBCVZ6vVsFvz8NfNCV13vSaiJFQfBaWApjrxZ8VZX
+[2m2026-06-19T19:52:59.737826Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m added a new user [3mname[0m[2m=[0muser_1 [3mpubkey[0m[2m=[0mCNSmgAb5pcAcQ77EYdtBVFekQWLict7YACLFVnDqhXiq
+[2m2026-06-19T19:52:59.737983Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m added a new user [3mname[0m[2m=[0mkeeper [3mpubkey[0m[2m=[0m4xi8PozSfryy8R5x6sezHUG3Bs2SGxh3TQYXnNVDPvpk
+[2m2026-06-19T19:52:59.738641Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m before funding users: 499999999994609720 [3mpayer[0m[2m=[0mFMtFKVAmo42jaoLdqWbnwM2KSv1mEmTBNp5mkzFS3vFz
+[2m2026-06-19T19:52:59.738712Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m funding user with lamports 2000000000 [3muser[0m[2m=[0m4xi8PozSfryy8R5x6sezHUG3Bs2SGxh3TQYXnNVDPvpk
+[2m2026-06-19T19:52:59.738829Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m funding user with lamports 2000000000 [3muser[0m[2m=[0mCNSmgAb5pcAcQ77EYdtBVFekQWLict7YACLFVnDqhXiq
+[2m2026-06-19T19:52:59.738852Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m funding user with lamports 2000000000 [3muser[0m[2m=[0mPFNBCVZ6vVsFvz8NfNCV13vSaiJFQfBaWApjrxZ8VZX
+[2m2026-06-19T19:52:59.738887Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m funding user with lamports 2000000000 [3muser[0m[2m=[0m8JcoKTirkMNwhxjEGccHo4b4KERpyUyUbJLPYqr4FECj
+[2m2026-06-19T19:53:00.243041Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m funded users with [
+    4WzbtiTsyAr1C3udAgiGeUm76WkrNxFUL4nAVsgu7kERGXDuSTfbfND84Twj4jQpxmYbkibAxpsSydXX48yKcYSj,
+]
+[2m2026-06-19T19:53:00.246076Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m creating mint account 54fxjZ6NPw6w1Pm4nZnEZBcm3vRzEp89mgJQYc7uAK8h [3mname[0m[2m=[0mUSDH
+[2m2026-06-19T19:53:00.246181Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m creating mint account 5KAVXTQwjeoPX1zZgxWRXYBkYXf7wuf92ENbtGCTvQZM [3mname[0m[2m=[0mfETH
+[2m2026-06-19T19:53:00.246206Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m creating mint account JBp8jtFRjyoiYQpfyfNMTFXEUdcd2DWX1NDYGKUdupn3 [3mname[0m[2m=[0mUSDG
+[2m2026-06-19T19:53:00.246224Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m creating mint account 4BvpW7W8gspHfUmxYFZo9T7DxXK8hDRcJSnWFm71vgSf [3mname[0m[2m=[0mfBTC
+[2m2026-06-19T19:53:00.246356Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m creating mint account CG8ZKAY1AH3aFPiwptdtrk7oJ7PW4yvhXomHSzv1KJYM [3mname[0m[2m=[0mqBTC
+[2m2026-06-19T19:53:00.761788Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m created tokens with [
+    3iXw5AL1R1rKopMUVb7X3ZgVYTUrMXmSUTajnQ6wkmW8eCQ4y3XKwJPM5RwaQ751me3HeigwwEujYEhhY6xzf9QF,
+]
+[2m2026-06-19T19:53:01.777212Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m initialized store with txns: [
+    2EtgcQdjLTZc7vxUjs2Eb2QhJoyg1NWBQTnUEAnHmK8gvqsUWG2PzGNPkgS1LqXTXRGdqsXjtNZvUpuzf8AZDT65,
+    465V5JM3c78yqCgJCt7KksWUZ52yWsLmuzBwJuRiGXmV5Knd8JEjhsgvnagfQCjCYJknTu2C4SY7iEUcSxPcaVWn,
+]
+[2m2026-06-19T19:53:03.800873Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m initialized token map with txns: [
+    3aa9HXxijvt3oTdRTN21vaYbDLZFAKzn7CqoaWLHAEUAnEPNBNBNqaeArvG1VehahhFcgaUd5rmy6HmSafuohq3s,
+    2tzzpHqNhUKtYX2KMeiGnN2TTMxQWhpebGwwsDMFQa8sjDDnCFon9gBvFgCNLP6WzizNt1rN85BS7ZKCUZ1FmJ7E,
+    4FrEgBDn4Xc7msuhX9uv2nMTep51C7WKXni4TQhAVxRnCyHsGedf4ZmFijMjmWoJaTZrc6ozjJ3oM5xBDvT8n4tL,
+    4zb8QjzDxfeqjjJAG5PjsnmV4fW7cJRP3EPYugi3UXejTDbZKeAgwRfuQ7FpXYfkGhdNZsHcF3eAUhtSwXQJH8W9,
+]
+[2m2026-06-19T19:53:03.801093Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m initialized oracle [3moracle[0m[2m=[0m6L3UYBT8RiUR5FwanEY656y2Yf8dbkQXwKaaAa6p9QDW
+[2m2026-06-19T19:53:10.392492Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m created markets with txns: [
+    2viMMpWvhM3mL8hY5d9TFq2cFmYd2aaoLAFLv4gEhp4ZwtavgXoBjQjfGivN6EDgZDqQLQjFfhpsKnW2YZfFSJCV,
+    TPavYDJy7bBbAESJ3FPowFW9rTETNqGE5meCsaKsy3s6GExg3QTzjzZDT6SemZS3JiAJ2zLLrRrG8Nuu5299Ukc,
+    4631kvzKcchnwjxhu7i6ubYcp2wbFTQmtvNVNQ4yToyGWUJro5fggXKv8aF5rbNMp3GDn3Jo2Ae7yheJKNkNvpCx,
+    vzsbMRtaRHZ78nqfDcjHCUy7uSR6U2ZSJaictqsfgLBuGiRYR5uAHSUzXGRabFF4Rb5AFxBu22exC62bKkroi8J,
+    2xLtwK6cFqupwp7CxxDvgWuD3EHPuXKXDUctujMY8GNTFFvknq5DJ6QQazhqVxFvdjAJHnABG1CNdhEVHWoPrcqw,
+    5Q3rH6ZpqF5KqHsKKuj8U4Bu2hvWM7NwRJ1cotUuFMFfs1PTxuNYQvfgMyfaRiNieAkpN7QGPedQeZ6kspteJQF1,
+    jKueWqWRHMi5KMnRY94vL2j8KYutQniVJN6JabPP7tvGbvVdqnhSrQHZYw8M5k8m8w2b1eavKEDtNxrYFFmPw3J,
+    5K2WMvJhCR15yzwaWDDVY1fsX6u7oFNzZxPvsxc65kx7aXQiPPRKZRtCcNrSRU7dNR8ASrrdGz7FbP27MYEADBBH,
+    z2FYmKTpjUGjcaK44tAVBa15sQo13xdrBenyjCmyh9TiKWvgGoCQHWCryyUStaB6pCXwTGu2jkxKicphruntcxP,
+    3mZkRxoRVfWdi7hgxPprSH1fiHAyVkrQDUEYSkq9jAgBb2ohs86iFGSBva1vFd8J2oQar5R8VczEkW4pWzQmrw4y,
+    2FXPJeu4V5psQi35ftv9dfdEPVbsXhqqZ7MXjAoLX4RQci4RVkwK2oFGKPodv7nhgbPXKvieMN87sYSzescwxBff,
+    3NvuM57Mgwi6RYaULBLxpN9hCWChvoMHbhzwgjRYzgjLNAF6ZbJ9kHZVGToghc7eK4bDDn4SL2kNg1EJtj3hBw1g,
+]
+[2m2026-06-19T19:53:10.899177Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m initialized a new GLV token [3msignature[0m[2m=[0m2TEV6t7Vx826XvFj5SurzYmyMDERJYvzXvxxV1GaksxotqCzJcY1roATFngYULD39bEo5Xc6Br974smRLgp5G7cH [3mglv_token[0m[2m=[0m7r3XADNMW12k8QiLPaFjW1giYMJNZzUjmDA5HiK7hAPu
+[2m2026-06-19T19:53:11.403738Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m GLV deposit enabled, signatures: [
+    4A1PfEteKzd77QBXwz5jpp7j5gGocpWNAjE54wyBfcsj15s3nRPgA1eej9w2MqTCGhsyNMpit7Rphdwzcxn6of4T,
+] [3mglv_token[0m[2m=[0m7r3XADNMW12k8QiLPaFjW1giYMJNZzUjmDA5HiK7hAPu
+[2m2026-06-19T19:53:12.410766Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m common ALT extended [3mlen[0m[2m=[0m22 [3msignatures[0m[2m=[0m[3mSLwhfLTb5MsD4HRS7tNCqcxbtkm6jEVVKp7nuKavjCYnEjV4djXGSZVhuJWNFgq1kJneGuePUcxYSgaGDSH2qy]
+[2m2026-06-19T19:53:13.420621Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m market ALT extended [3mlen[0m[2m=[0m36 [3msignatures[0m[2m=[0m[utfgRR6Yezm3mygLhGo2dMQmtRKHu8h2XuxdDHXz6PXU5SQ2g8mbjMgxWAr5CciJwXtkT9Bg1gwZY1FDX415KRG, 3FygPGAvjujqfhbwzR9hk8NuvQGXTNNuZ3y6ZoaDR94p6CCeo1bG9iGc5RRdMDu4aUS6sHQatujnCDwvXMXZiDhS]
+[2m2026-06-19T19:53:13.924587Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m initialized GT with txns: [
+    tHS5YoQbFzPyZwqbYyeuGJ9131xAZHTSKit8yXghZs6cRpwe3a1zPs7woMFFqc4om3at8jRsfdCpGX5oLRkmCPo,
+]
+[2m2026-06-19T19:53:14.428661Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m initialized liquidity provider program [3msignature[0m[2m=[0m5MaBA5BTWFQVLadtYSepzsR2fYv54jVkap5GvV466p1rgBGngNvTrWCz1YRqWVVfwjgYQGerERVC9FcPLNYboT51
+[2m2026-06-19T19:53:14.932766Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m granted GT_CONTROLLER role to liquidity provider GlobalState [3msignature[0m[2m=[0mPJB7cQroEHUjHZBQGxJFrjS5jwoG3tmndhEBZQWF1qSVr7AJw1gMDcrXu4Fc3Y9zwHvjU88QfekGXPnxb1gNt66
+[2m2026-06-19T19:53:15.437667Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m initialized liquidity provider oracle with GlobalState authority [3msignature[0m[2m=[0m4rBt4d5DciMSGynFwiSApkjasz8Q8iKM9um3VbNW9dCKXdWQUrG1obs5RQYm6hMA7qy9kvaXhqmDzzMVVbVnU6B1 [3moracle[0m[2m=[0mechSqK1kZcJF2vfcKRPA9vGtmqFy3kR3UDxMDhW5cjE [3mauthority[0m[2m=[0m4pnQypnN7pBvwiCZ7Ve4Yr2UD9x9TnsQYxnPuJ9FMWcG
+[2m2026-06-19T19:53:15.437923Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["SOL", "WSOL", "WSOL"]: controller=Avc85XraM1dLcN4wNzx5nPvLDYz9SNmDaQbSRfiLJwnK, token=4seuiutrZe9ivc4x4FSiLsSSNcErhybKTaqhb9mvA4fq
+[2m2026-06-19T19:53:15.438053Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["SOL", "fBTC", "USDG"]: controller=DogMf49JUKP4aWnWR2UxuY71RWnCo7JXyjSURHuLunAw, token=7vcRizm27A7v5SM55HjNtyEieM5VPsjRQEashex1YwUN
+[2m2026-06-19T19:53:15.438173Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["fBTC", "USDG", "fBTC"]: controller=12833AXoZsfS5zQGyiGrk18hgHRPHG67kuAnK4ZqA7QW, token=DcwANcEurknBFwYciCLhSr2WeipxAGvirgZCVadYxBHG
+[2m2026-06-19T19:53:15.438299Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["fBTC", "USDG", "WSOL"]: controller=GEzJAJmHNabk3xHHbZzw6RpbjtpzV25h7rZo3JxkqB2K, token=EHVBMjxsaMTMRgagW6Eq1zK9TZR1DssPjMEDJD4cBLg8
+[2m2026-06-19T19:53:15.438369Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["SOL", "WSOL", "USDG"]: controller=7gK6JJhYcumYY1RwmLy3n6NsV3zjeEX2oDrr5aK8RgNU, token=8QLzVBqHPUUvdmH9Qm2QeRdcvmqJ2GRYDY1zpnwhWNBy
+[2m2026-06-19T19:53:15.438439Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["fETH", "fETH", "USDH"]: controller=3TJqXSf9ewqCSbuQPS753o2CMJcjUVqCMb8g6Wfdc9Sw, token=9vNmNvYQnEfAG6ipK7Awr2Q1vnMKHEDoE1dJcDd7av1T
+[2m2026-06-19T19:53:15.438576Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["qBTC", "qBTC", "USDG"]: controller=BcbfMtnKkmHHKPaF8ExbVq2v1Xtjahx17jyDsCsigPzk, token=GE6pk3qGnRGf2aKqdnpr9KeGhqeFoC9NQBvwoNCgQZfM
+[2m2026-06-19T19:53:15.438621Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["qBTC", "qBTC", "qBTC"]: controller=E9r7Qyh1ueAtgssq5hezqBAipcRb5mXMDvY8Likw2VoC, token=AAz3Zswfz9iQzE3aGECSGotqqVv1bNz8KY93BxzF3ezX
+[2m2026-06-19T19:53:15.438665Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["fBTC", "WSOL", "USDG"]: controller=8TLhvTUcNW22wZk5R88rjeVLvgz4UZLq7VZmMfpj7HpL, token=8LNd4QbokjoaWVZ2u8sdFjGFqFwGEKe33YQJRTBJhfCj
+[2m2026-06-19T19:53:15.438735Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["fBTC", "fBTC", "USDG"]: controller=HWwQ8fu6oVhC4drfypoLXHTAY34a3Z4sMLR2LmeBmpu, token=AfhrYJoP5XdJrWPBryKn6JhY399M1hyu5BZhbMBX19zz
+[2m2026-06-19T19:53:15.438798Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["SOL", "fBTC", "fBTC"]: controller=4PkDuRZvWXpaUqteHdSUWSW6mHaYQDQ4gyzMayJrqcgB, token=8fMzE47ko3SCf8ah7iqswhUHrHH4vbLpJRaM3eQwZycK
+[2m2026-06-19T19:53:15.438882Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GM market ["SOL", "USDG", "fBTC"]: controller=7UwD3qrLMDzFfiPycVFS517zM1XLMFyhSPpFEirnzTVX, token=75raPtdpRGdmqn66maBEVEVEjTSWyG2kXNnEYSmR2g28
+[2m2026-06-19T19:53:15.438953Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Creating LP token controller for GLV: controller=HhLNW8Cj4L7Ud48LKndez4pKFDeU7NDo9RUvP2PQDXx2, token=7r3XADNMW12k8QiLPaFjW1giYMJNZzUjmDA5HiK7hAPu
+[2m2026-06-19T19:53:16.452069Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m Created LP token controllers with signatures: [
+    32ekGt9E5XpXYtH6eyhWCua4wF9rGqfjVt3Qg1Bm1oeaZfebcMXTKPfpW24AoVk4pNkHoNEai2ZN9ybhqZN9n4uk,
+    5bRCexg8PvWVLpbmj2XmwzvmFXs3Ex7Y1WNWtU9sdBp5mE6R5MrABcJNsZVsa3MYW42G5aQJM1c8uUEB2ZdHNa1T,
+]
+[2m2026-06-19T19:53:17.509727Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m initialized gt-incentive program [3msignature[0m[2m=[0m61Sr3zc3sbr6CbDSu8NDPG5v2jfqYRAR2npmSeBpFbJcaWXB45Gt4jhdNJdoUni4ZPCuojPK1Umi1BA7pFGLbmzJ
+[2m2026-06-19T19:53:18.017041Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m initialized callback with txns: [
+    2QfojswT8AktVsEtff38SeY41zUUbeyfUfLmPJbqcjhDsojTSifnz3EedDcBLBBfWSBdfLHWrf3xurMn8ifRTFgo,
+]
+[2m2026-06-19T19:53:18.536132Z[0m [32m INFO[0m [2manchor::anchor_test::setup[0m[2m:[0m initialized virtual inventories with txns: [
+    369YrbDrkQKpuHQNa8SY9FqiZinWuJmcEeg2nRaDDcGJHzrAoXNh12CyEJsG4ew3tKtNRgdpnd7wnKkb6gDztYVG,
+]
+[2m2026-06-19T19:53:18.536257Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m SETUP: creating isolated 12-market GLV fixture [3mmarkets[0m[2m=[0m12 [3mshared_index_feed[0m[2m=[0mtrue [3mpath_markets[0m[2m=[0m8
+test anchor_test::glv::glv_omits_inactive_markets_from_execution_accounts has been running for over 60 seconds
+[2m2026-06-19T19:54:07.965017Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m SETUP COMPLETE [3mglv_token[0m[2m=[0m78gAuDEUw6oJKMFUwbtKvTtc9zKVSK4tkS9HDrGKwnax [3mmarkets[0m[2m=[0m12 [3malt[0m[2m=[0m2HPBXPd8bgfPKZFJbGP3c8geiNaxi3SavUSyfzQGPmTA [3malt_addresses[0m[2m=[0m56
+[2m2026-06-19T19:54:07.965175Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m ========== PHASE 1: seed liquidity for the selected GLV market ==========
+[2m2026-06-19T19:54:08.974058Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::setup[0m[2m:[0m minted or tranferred 20000000 to PFNBCVZ6vVsFvz8NfNCV13vSaiJFQfBaWApjrxZ8VZX [3msignature[0m[2m=[0m47NaiT1WFktXdUoX4qyWRMoXbpWQLhn2rkB68j7gqEtfb5boEVXULJxLfuk5escxrtPbafCUgffv8uYGS8ej5cin [3mtoken[0m[2m=[0mfBTC
+[2m2026-06-19T19:54:09.984572Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::setup[0m[2m:[0m minted or tranferred 20000000 to PFNBCVZ6vVsFvz8NfNCV13vSaiJFQfBaWApjrxZ8VZX [3msignature[0m[2m=[0m4VY2gNY7L42SjJaUbGWAi8mPt98Y8LUz4DF2d3sf6btQURaJM3hLE95DCReUbrsmkWHdY8GbfsGYZoWVPtpeff6i [3mtoken[0m[2m=[0mUSDG
+[2m2026-06-19T19:54:15.962699Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::setup[0m[2m:[0m executed, txns=[WithSlot { slot: 195, value: 2K4KBfXE4pp6NaZSi8CQ28KozZyzzqH7hZ6HVbrVG6wyvbPWEocwTEUbuurX1zWjN9q4Ucyiy9TjoE22ANDSzbei }, WithSlot { slot: 196, value: qJZt3hxvzYwE5YvQeg8BFXYh285adRCFCJ5woo7RhtijaWy8U1aDujhvguSsXhBo2whRb2eXA98tRjfGX3yddGp }, WithSlot { slot: 197, value: 2ihtzKZxkmnL7Y9Sf9VoA1LiVuu73WjrZjBBBhgtyAfoPjCLrmQaQu7EBAUELWGe5zw2xxvqDCjcbaQN2KYxcej8 }, WithSlot { slot: 197, value: 4ryXrsse6A5gj9yL8QiJQwTmtjGtu76ZLWzrE6usFp2BLCbYns3Gbm7ZbrShkRXxKqMo477rJ9MpARunqscRh2u2 }, WithSlot { slot: 198, value: WLZEMKB6tDHR86inNinEYjBAxaN6itE6vLPXPDPwBfaYsHESJ4Ns9s35JtbA63XubE5VQ1B7NsoZqKAizLpQPWp }, WithSlot { slot: 199, value: rbGFVfkCjiLPRTnKPBYndwG1EdgNK3kdt7TvmWmNRsyfmDwqPqeHmbupGAhTbZQXVjg9AmLxV7Ehrk3HCRmLHda }, WithSlot { slot: 200, value: 62zj9yy4cHA7zQq7pW12Et4KAJvkUusSEiAQN9nrVenj39V4QsiodQ5gSowGRcXuFosE1FufGCd787iysSJ1KNLW }]
+[2m2026-06-19T19:54:15.963072Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m ========== PHASE 2: baseline — 12 markets, no swap path, close merged ==========
+[2m2026-06-19T19:54:16.470028Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m TRANSACTION SCENARIO [3mcase[0m[2m=[0m"baseline deposit + close" [3mconfigured_glv_markets[0m[2m=[0m12 [3mactive_glv_markets[0m[2m=[0m1 [3minactive_glv_markets[0m[2m=[0m11 [3mswap_path_markets[0m[2m=[0m0 [3mclose_merged[0m[2m=[0mtrue [3maccount_shape[0m[2m=[0m"Only the active GLV market is priced; there is no swap path or route inventory."
+GLV_SCENARIO case="baseline deposit + close" configured_markets=12 active_markets=1 inactive_markets=11 swap_path_markets=0 close_merged=true account_shape="Only the active GLV market is priced; there is no swap path or route inventory."
+[2m2026-06-19T19:54:20.673851Z[0m [31mERROR[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2mgmsol_solana_utils::bundle_builder[0m[2m:[0m [batch 3] transaction 0 failed: https://explorer.solana.com/tx/inspector?message=gAEABAw62IIdI8RCOpykoMXGdOcBKYEa%2FSz2rwafKFDsDcgotQWzBT2Pf3zRdnMq%2FgqFy3lAh8zEM8cGvcYr5RLLUXYGPqgimMqRwnvd%2FdHjV2T%2BBkJa1WG14GkIBNPRsFMqrp5XbI1TuHK%2Fa2Ao4Y1ID09LXA3lffBK%2BBPpJg%2BFTRWsMl1t8tSligCeWSqd4nhERHqIruJiMv7jEQP7Ffnweb%2FoeJvmfoD0KZecNNwqlOo%2BiY2VU%2Fac64bWMuKfLtPZOY6tVVfSaBS3AIc1VwJ8rGFvQcBAPLGNzN33UerVqmVdSemM5sLxfgZhTB6przhP%2BvP55CXvmH7dAYQXtebLqD0kAnoIRpteGY3eUAzhpmb%2BrJy3EePo1KqX%2FVGr6e9iK14DBkZv5SEXMv%2Fsrbpyw5vnvIzlu8X3EmssQ5s6QAAAAF6vsuvBjSVBWnFTe%2B7q0mE6EnrLCX%2Fa43SfMKMvtxsY6l5Kr%2BTQp3JVGBKVeNtMggw2%2FFCTqmoSE8CCfW7VRAjVZom2jkN8upVlm0vUqRUrSvusjkibFeMPX2QDE24TRwQJAAUCQEIPAAkACQNQwwAAAAAAAAtAADAtEgwOBA0QCwsCAwsLCwsHKywqCy4LFBopFyMiJQ4eJB0gFRYYGRscHxAhJicoCAgICAgICAgICAgICAoPERESUdYVUuiUsQAAAAAAAAAAAQsYADATAQEEEAsLDQMLCwIGCwsFKissLy4LFBeDmwVPSUr3CAAAAGV4ZWN1dGVkAhMOD33fho3HZiZJO7V%2FV9ot5GjXOfrI3uby3R2IzfYdBgABAycCJhYPDgUVCBQGFxoSHiMMHRsYISQgEQsJ8z8jLddXLqs%2BamxmBIcgMcat6Zm92%2FWqpW8SXH44jV8CAwEHCAUGAgQHAA%3D%3D&cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899 [3merr[0m[2m=[0mRPC response error -32002: Transaction simulation failed: Error processing Instruction 2: custom program error: 0x179e; 12 log messages:
+  Program ComputeBudget111111111111111111111111111111 invoke [1]
+  Program ComputeBudget111111111111111111111111111111 success
+  Program ComputeBudget111111111111111111111111111111 invoke [1]
+  Program ComputeBudget111111111111111111111111111111 success
+  Program Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo invoke [1]
+  Program log: Instruction: ExecuteGlvDeposit
+  Program log: [Oracle] price is adjusted, feed_id = GVXRSBjFk6e6J3NbVPXohDJetcTjaeeuykUpbQF8UoMU
+  Program log: [Oracle] price is adjusted, feed_id = Gnt27xtC473ZT2Mw5u8wZ68Z3gULkSTb5DuxJy7eJotD
+  Program log: oracle = 1781898853, require >= 1781898855
+  Program log: AnchorError thrown in programs/store/src/ops/glv.rs:281. Error Code: OracleTimestampsAreSmallerThanRequired. Error Number: 6046. Error Message: oracle timestamps are smaller than required.
+  Program Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo consumed 137404 of 999700 compute units
+  Program Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo failed: custom program error: 0x179e
+ [3mhash[0m[2m=[0mFN2XS61n8FfxHEPuWDgY4R4XcopgSxKmfBVk6XxnRdnN [3mconfig[0m[2m=[0mRpcSendTransactionConfig { skip_preflight: false, preflight_commitment: Some(Confirmed), encoding: None, max_retries: None, min_context_slot: None }
+[2m2026-06-19T19:54:21.683021Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m GLV ACCOUNT REPORT [3mcase[0m[2m=[0m"baseline deposit + close" [3mconfigured_glv_markets[0m[2m=[0m12 [3mactive_glv_markets[0m[2m=[0m1 [3mswap_path_markets[0m[2m=[0m0 [3mtotal_account_references[0m[2m=[0m92 [3munique_accounts[0m[2m=[0m49 [3munique_oracle_feeds[0m[2m=[0m2 [3mserialized_size[0m[2m=[0m744 [3mpacket_limit[0m[2m=[0m1232 [3mpacket_headroom[0m[2m=[0m488 [3mclose_merged[0m[2m=[0mtrue
+GLV_ACCOUNT_REPORT case="baseline deposit + close" configured_markets=12 active_markets=1 swap_path_markets=0 total_account_references=92 unique_accounts=49 unique_oracle_feeds=2 serialized_size=744 packet_limit=1232 close_merged=true
+[2m2026-06-19T19:54:21.683178Z[0m [33m WARN[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m oracle update is stale; retrying transaction [3mcase[0m[2m=[0m"baseline deposit + close" [3mattempt[0m[2m=[0m1
+[2m2026-06-19T19:54:23.684394Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m TRANSACTION SCENARIO [3mcase[0m[2m=[0m"baseline deposit + close" [3mconfigured_glv_markets[0m[2m=[0m12 [3mactive_glv_markets[0m[2m=[0m1 [3minactive_glv_markets[0m[2m=[0m11 [3mswap_path_markets[0m[2m=[0m0 [3mclose_merged[0m[2m=[0mtrue [3maccount_shape[0m[2m=[0m"Only the active GLV market is priced; there is no swap path or route inventory."
+GLV_SCENARIO case="baseline deposit + close" configured_markets=12 active_markets=1 inactive_markets=11 swap_path_markets=0 close_merged=true account_shape="Only the active GLV market is priced; there is no swap path or route inventory."
+[2m2026-06-19T19:54:28.891166Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m GLV ACCOUNT REPORT [3mcase[0m[2m=[0m"baseline deposit + close" [3mconfigured_glv_markets[0m[2m=[0m12 [3mactive_glv_markets[0m[2m=[0m1 [3mswap_path_markets[0m[2m=[0m0 [3mtotal_account_references[0m[2m=[0m92 [3munique_accounts[0m[2m=[0m49 [3munique_oracle_feeds[0m[2m=[0m2 [3mserialized_size[0m[2m=[0m744 [3mpacket_limit[0m[2m=[0m1232 [3mpacket_headroom[0m[2m=[0m488 [3mclose_merged[0m[2m=[0mtrue
+GLV_ACCOUNT_REPORT case="baseline deposit + close" configured_markets=12 active_markets=1 swap_path_markets=0 total_account_references=92 unique_accounts=49 unique_oracle_feeds=2 serialized_size=744 packet_limit=1232 close_merged=true
+[2m2026-06-19T19:54:28.891234Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m RESULT: transaction executed [3mcase[0m[2m=[0m"baseline deposit + close" [3mactual_outcome[0m[2m=[0m"EXECUTED" [3munique_accounts[0m[2m=[0m49
+GLV_RESULT case="baseline deposit + close" actual=EXECUTED unique_accounts=49
+[2m2026-06-19T19:54:29.397213Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m TRANSACTION SCENARIO [3mcase[0m[2m=[0m"baseline withdrawal + close" [3mconfigured_glv_markets[0m[2m=[0m12 [3mactive_glv_markets[0m[2m=[0m1 [3minactive_glv_markets[0m[2m=[0m11 [3mswap_path_markets[0m[2m=[0m0 [3mclose_merged[0m[2m=[0mtrue [3maccount_shape[0m[2m=[0m"Only the active GLV market is priced; there is no output swap path or route inventory."
+GLV_SCENARIO case="baseline withdrawal + close" configured_markets=12 active_markets=1 inactive_markets=11 swap_path_markets=0 close_merged=true account_shape="Only the active GLV market is priced; there is no output swap path or route inventory."
+[2m2026-06-19T19:54:34.609744Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m GLV ACCOUNT REPORT [3mcase[0m[2m=[0m"baseline withdrawal + close" [3mconfigured_glv_markets[0m[2m=[0m12 [3mactive_glv_markets[0m[2m=[0m1 [3mswap_path_markets[0m[2m=[0m0 [3mtotal_account_references[0m[2m=[0m93 [3munique_accounts[0m[2m=[0m58 [3munique_oracle_feeds[0m[2m=[0m2 [3mserialized_size[0m[2m=[0m878 [3mpacket_limit[0m[2m=[0m1232 [3mpacket_headroom[0m[2m=[0m354 [3mclose_merged[0m[2m=[0mtrue
+GLV_ACCOUNT_REPORT case="baseline withdrawal + close" configured_markets=12 active_markets=1 swap_path_markets=0 total_account_references=93 unique_accounts=58 unique_oracle_feeds=2 serialized_size=878 packet_limit=1232 close_merged=true
+[2m2026-06-19T19:54:34.609801Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m RESULT: transaction executed [3mcase[0m[2m=[0m"baseline withdrawal + close" [3mactual_outcome[0m[2m=[0m"EXECUTED" [3munique_accounts[0m[2m=[0m58
+GLV_RESULT case="baseline withdrawal + close" actual=EXECUTED unique_accounts=58
+[2m2026-06-19T19:54:34.609822Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m ========== PHASE 3: route-heavy deposit — inactive configured markets omitted ==========
+[2m2026-06-19T19:54:35.117671Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m TRANSACTION SCENARIO [3mcase[0m[2m=[0m"route-heavy deposit + close" [3mconfigured_glv_markets[0m[2m=[0m12 [3mactive_glv_markets[0m[2m=[0m1 [3minactive_glv_markets[0m[2m=[0m11 [3mswap_path_markets[0m[2m=[0m8 [3mclose_merged[0m[2m=[0mtrue [3maccount_shape[0m[2m=[0m"Eight swap-path market references, distinct swap/position virtual inventories, and merged close accounts produce a 65-account transaction."
+GLV_SCENARIO case="route-heavy deposit + close" configured_markets=12 active_markets=1 inactive_markets=11 swap_path_markets=8 close_merged=true account_shape="Eight swap-path market references, distinct swap/position virtual inventories, and merged close accounts produce a 65-account transaction."
+[2m2026-06-19T19:54:39.336177Z[0m [31mERROR[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2mgmsol_solana_utils::bundle_builder[0m[2m:[0m [batch 3] transaction 0 failed: https://explorer.solana.com/tx/inspector?message=gAEABAw62IIdI8RCOpykoMXGdOcBKYEa%2FSz2rwafKFDsDcgotQWzBT2Pf3zRdnMq%2FgqFy3lAh8zEM8cGvcYr5RLLUXYGTVYeLmNKzbrVjQ7zMttaJOt9e9bLVNcLqlcjP1Ts97FyoAlgtAFMUM5bY2qqrItdp0Zy8xFCeJDOVUhnNyRms3ib5n6A9CmXnDTcKpTqPomNlVP2nOuG1jLiny7T2TmOrVVX0mgUtwCHNVcCfKxhb0HAQDyxjczd91Hq1aplXUnFtq0NceAcUqUkmXlLL9OEGtSeAUHyepdBeWb%2BDoeeaumM5sLxfgZhTB6przhP%2BvP55CXvmH7dAYQXtebLqD0kAwZGb%2BUhFzL%2F7K26csOb57yM5bvF9xJrLEObOkAAAACA7QbC4STTcEygamgX3jc6vwV08jlk36JODXOlPhEVd%2BpeSq%2Fk0KdyVRgSlXjbTIIMNvxQk6pqEhPAgn1u1UQI%2BqGVF8S1kxVNLbPPrZkRq4OXqRghxFW1Go%2F4ZN9R9yvdIr2w6YBCi2xCnoDEces9uL5qXyRQSxNAWGpsdFV2AQQIAAUCQEIPAAgACQNQwwAAAAAAAApYAEA9KgwZBhceCgoDAgoKCgoHOzw6Cj4KDhUmFCMiNhkyNRgcLC0uLzAxMx40Nzg5CQkJCQkJCQkJCQkJCQsVJhwOGBQjIg0PEBESExYaGx0fICEkJScoKRESUdYVUuiUsQAAAAAAAAAAAQoYAEArAQEGHgoKFwIKCgMFCgoEOjs8Pz4KFBeDmwVPSUr3CAAAAGV4ZWN1dGVkAhMOD33fho3HZiZJO7V%2FV9ot5GjXOfrI3uby3R2IzfYdHgAtDy82NzE1FQYsARIDKikMJwIoLisbGDImCTQzMA4OBQgUFxoeIx0hJCARC%2FM%2FIy3XVy6rPmpsZgSHIDHGremZvdv1qqVvElx%2BOI1fAgMBBwgFBgIEBwA%3D&cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899 [3merr[0m[2m=[0mRPC response error -32002: Transaction simulation failed: Transaction locked too many accounts;  [3mhash[0m[2m=[0mFtDpvgxn4MY49WrK1d7o28BhJPYzx1YfAAzbmA96Cghn [3mconfig[0m[2m=[0mRpcSendTransactionConfig { skip_preflight: false, preflight_commitment: Some(Confirmed), encoding: None, max_retries: None, min_context_slot: None }
+[2m2026-06-19T19:54:40.343336Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m GLV ACCOUNT REPORT [3mcase[0m[2m=[0m"route-heavy deposit + close" [3mconfigured_glv_markets[0m[2m=[0m12 [3mactive_glv_markets[0m[2m=[0m1 [3mswap_path_markets[0m[2m=[0m8 [3mtotal_account_references[0m[2m=[0m116 [3munique_accounts[0m[2m=[0m65 [3munique_oracle_feeds[0m[2m=[0m2 [3mserialized_size[0m[2m=[0m784 [3mpacket_limit[0m[2m=[0m1232 [3mpacket_headroom[0m[2m=[0m448 [3mclose_merged[0m[2m=[0mtrue
+GLV_ACCOUNT_REPORT case="route-heavy deposit + close" configured_markets=12 active_markets=1 swap_path_markets=8 total_account_references=116 unique_accounts=65 unique_oracle_feeds=2 serialized_size=784 packet_limit=1232 close_merged=true
+[2m2026-06-19T19:54:40.343426Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m RESULT: transaction rejected before GMX execution [3mcase[0m[2m=[0m"route-heavy deposit + close" [3mactual_outcome[0m[2m=[0m"REJECTED_TOO_MANY_ACCOUNT_LOCKS" [3munique_accounts[0m[2m=[0m65
+GLV_RESULT case="route-heavy deposit + close" actual=REJECTED_TOO_MANY_ACCOUNT_LOCKS unique_accounts=65
+[2m2026-06-19T19:54:40.343453Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m ========== PHASE 4: route-heavy withdrawal — inactive configured markets omitted ==========
+[2m2026-06-19T19:54:40.851076Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m TRANSACTION SCENARIO [3mcase[0m[2m=[0m"route-heavy withdrawal + close" [3mconfigured_glv_markets[0m[2m=[0m12 [3mactive_glv_markets[0m[2m=[0m1 [3minactive_glv_markets[0m[2m=[0m11 [3mswap_path_markets[0m[2m=[0m4 [3mclose_merged[0m[2m=[0mtrue [3maccount_shape[0m[2m=[0m"Four output-route markets, virtual inventories, the external route market, receiver/output accounts, and merged close accounts produce a 68-account transaction."
+GLV_SCENARIO case="route-heavy withdrawal + close" configured_markets=12 active_markets=1 inactive_markets=11 swap_path_markets=4 close_merged=true account_shape="Four output-route markets, virtual inventories, the external route market, receiver/output accounts, and merged close accounts produce a 68-account transaction."
+[2m2026-06-19T19:54:44.595394Z[0m [31mERROR[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2mgmsol_solana_utils::bundle_builder[0m[2m:[0m [batch 3] transaction 0 failed: https://explorer.solana.com/tx/inspector?message=gAEABRM62IIdI8RCOpykoMXGdOcBKYEa%2FSz2rwafKFDsDcgotQWzBT2Pf3zRdnMq%2FgqFy3lAh8zEM8cGvcYr5RLLUXYGEbpZgDAee6MP6%2F0%2BMXI%2F3Br1Yq0CLzQRQDblaSVwhB4sunG7o4lZpni8tfQEyt2BXV2L9eMK3C8WMyqO8DcBfjUwQPrVNwlIYkGfRdsdeW7atuAK8LaSsZ4zO6diYNt1TxNNL80BB8qkVJtLp8TikAHy%2FQVJlgXBzgBdGbzdv2J4m%2BZ%2BgPQpl5w03CqU6j6JjZVT9pzrhtYy4p8u09k5jn1AniT411OGif7GmcJlOnkrvVfFrO5CVEYssVFcq2GnqO7kRxnUOtkAs3XQD1mf70l8jVdfm10j%2FNgtNDkjP7KtVVfSaBS3AIc1VwJ8rGFvQcBAPLGNzN33UerVqmVdSa3ut79lyXeFsz%2FCOI8aojDvq7cFLnkeZsDsD5VaRoU%2BzENcEN4gJ%2BTt2mG9LFBOY3ZYPtIvungtLB1XkVL2NSrnLqHd3HP1CzeYjwDCt3nScyxOniBfXOAqAT37lvJfMumM5sLxfgZhTB6przhP%2BvP55CXvmH7dAYQXtebLqD0kAwZGb%2BUhFzL%2F7K26csOb57yM5bvF9xJrLEObOkAAAAADCd%2Bt3aoiwPRQSFbDIsb0F1256XUQDDI1xdLnuGD%2FEwN%2BYSYhI1w6VQqNb13h6nNBmJItd7fhkd3nYuHUAisapI1DcJgGj3SdPKluaHzUcQdZI5EniCpBIt09LO8e4G7qXkqv5NCnclUYEpV420yCDDb8UJOqahITwIJ9btVECGGaJXuaxhUyXAuNBrLggKrTc%2BB31wHFdQvK%2B5BQEw9YBA4ABQJAQg8ADgAJA1DDAAAAAAAAEk8AQj8kExgLFx48QwUHDAIbJiUNPT47EkASKBUiKzU0NxgxNjAcKSosLS4vMh4zODk6ERAQEBAQEBAQEBAQEBEQDxUiHCMUAxYZGh0fCiAhEaGR%2F8jgCLeHAAAAAAAAAAABEhgAQicBCAsePEMXBwwCCQgEBQY7PT5BQBIUDtEmMWEqs9QIAAAAZXhlY3V0ZWQDEw4Pfd%2BGjcdmJkk7tX9X2i3kaNc5%2Bsje5vLdHYjN9h0QAC0GLAEDKikEDCcCKCsmCRMPDgUVCBQXGhIeIx0bGCEkIBELn3tMR%2BZYEtiHnEDk4Va%2BQnMmgzrn7jhoSOUNtqChrB0BDADzPyMt11cuqz5qbGYEhyAxxq3pmb3b9aqlbxJcfjiNXwQDCw8BCQgOBQYCBAcACg%3D%3D&cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899 [3merr[0m[2m=[0mRPC response error -32002: Transaction simulation failed: Transaction locked too many accounts;  [3mhash[0m[2m=[0m7Zzsj1KTgUZzvqPGLNCwv4TELSiLDJrNDn6R8os2z72F [3mconfig[0m[2m=[0mRpcSendTransactionConfig { skip_preflight: false, preflight_commitment: Some(Confirmed), encoding: None, max_retries: None, min_context_slot: None }
+[2m2026-06-19T19:54:45.602661Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m GLV ACCOUNT REPORT [3mcase[0m[2m=[0m"route-heavy withdrawal + close" [3mconfigured_glv_markets[0m[2m=[0m12 [3mactive_glv_markets[0m[2m=[0m1 [3mswap_path_markets[0m[2m=[0m4 [3mtotal_account_references[0m[2m=[0m107 [3munique_accounts[0m[2m=[0m68 [3munique_oracle_feeds[0m[2m=[0m3 [3mserialized_size[0m[2m=[0m1029 [3mpacket_limit[0m[2m=[0m1232 [3mpacket_headroom[0m[2m=[0m203 [3mclose_merged[0m[2m=[0mtrue
+GLV_ACCOUNT_REPORT case="route-heavy withdrawal + close" configured_markets=12 active_markets=1 swap_path_markets=4 total_account_references=107 unique_accounts=68 unique_oracle_feeds=3 serialized_size=1029 packet_limit=1232 close_merged=true
+[2m2026-06-19T19:54:45.602739Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m RESULT: transaction rejected before GMX execution [3mcase[0m[2m=[0m"route-heavy withdrawal + close" [3mactual_outcome[0m[2m=[0m"REJECTED_TOO_MANY_ACCOUNT_LOCKS" [3munique_accounts[0m[2m=[0m68
+GLV_RESULT case="route-heavy withdrawal + close" actual=REJECTED_TOO_MANY_ACCOUNT_LOCKS unique_accounts=68
+[2m2026-06-19T19:54:45.602771Z[0m [32m INFO[0m [1mglv_omits_inactive_markets_from_execution_accounts[0m[2m:[0m [2manchor::anchor_test::glv[0m[2m:[0m ========== PROOF COMPLETE: identical transaction cases were submitted to the validator ========== [3mbaseline_deposit_accounts[0m[2m=[0m49 [3mbaseline_withdrawal_accounts[0m[2m=[0m58 [3mroute_heavy_deposit_accounts[0m[2m=[0m65 [3mroute_heavy_deposit_outcome[0m[2m=[0mRejectedTooManyAccountLocks [3mroute_heavy_withdrawal_accounts[0m[2m=[0m68 [3mroute_heavy_withdrawal_outcome[0m[2m=[0mRejectedTooManyAccountLocks
+test anchor_test::glv::glv_omits_inactive_markets_from_execution_accounts ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 40 filtered out; finished in 112.07s
+
